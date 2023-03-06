@@ -13,7 +13,7 @@ semaphore mutex=1; //To avoid race condition in changing the readcount value in 
 <br>
 semaphore alter=1; // this alter semaphore allows only either of reader or writer to enter into critical section. 
 ```
-# Readers Code
+# Reader's Code
 
 ```C++
 Read(){
@@ -31,7 +31,7 @@ if (rd_cnt == 0) signal(alter);
 signal(mutex)
 }
 ```
-# Writers Code
+# Writer's Code
 ```C++
 
 Write(){
