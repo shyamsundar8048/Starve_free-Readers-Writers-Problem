@@ -58,5 +58,7 @@ After a request got served we reduce the value of rd_cnt, if increment and decre
 For simplicity before pushing the request into the queue, we create another queue correspondind to the `"REQUESTS"` queue which store only 1 or 0 which allows us to know whether the request is read() or write() easily.We push() whenever there is push in the main queue and pop() also according to the main one.
 # Conclusion:
 `Starve Free :` According to the pesudocode written we applied fifo way of serving the requests from the queue "REQUESTS",so no process waits ie no starvation.
+<br>
 `Deadlock :`As it is fifo algorithm there is no chance of having a deadlock.
+<br>
 `Mutual Exclusion :` Semaphore `"alter"` ensures that the critical section access is mutually excluded;
